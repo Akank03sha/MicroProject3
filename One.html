@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>List of Food Items</title>
+</head>
+<body>
+    <h1>List of Food Items</h1>
+    <ul id="foodList"></ul>
+
+    <script>
+        function printFoodItems(foodList) {
+            const listElement = document.getElementById("foodList");
+            for (let item of foodList) {
+                const listItem = document.createElement("li");
+                listItem.textContent = item;
+                listElement.appendChild(listItem);
+            }
+        }
+
+        // List of food items
+        const foodList = [
+            "apple", "banana", "orange", "pear", "grapefruit", "strawberry", "blueberry", "raspberry",
+            "broccoli", "cauliflower", "green beans", "asparagus", "spinach", "kale",
+            "sweet potato", "potato", "carrot", "onion", "egg", "chicken breast", "salmon", "tuna",
+            "beef", "pork", "lamb", "shrimp", "quinoa", "brown rice", "oats",
+            "bread", "pasta", "milk", "cheese", "yogurt", "butter",
+            "almonds", "walnuts", "peanuts", "cashews"
+        ];
+
+        // Call the function to print the food items
+        printFoodItems(foodList);
+    </script>
+</body>
+</html>
